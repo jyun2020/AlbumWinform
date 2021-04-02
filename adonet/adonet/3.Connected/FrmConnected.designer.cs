@@ -52,12 +52,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button26 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button27 = new System.Windows.Forms.Button();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button26 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -383,6 +383,17 @@
             this.tabPage7.Text = "Load Data";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(5, 12);
+            this.button26.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(110, 28);
+            this.button26.TabIndex = 1;
+            this.button26.Text = "Load Data";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -436,17 +447,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(5, 12);
-            this.button26.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(110, 28);
-            this.button26.TabIndex = 1;
-            this.button26.Text = "Load Data";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // listBox3
             // 
@@ -1144,7 +1144,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1096, 525);
+            this.tabControl1.Size = new System.Drawing.Size(1095, 525);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage3
@@ -1157,7 +1157,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1088, 496);
+            this.tabPage3.Size = new System.Drawing.Size(1087, 496);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ExecuteXXX";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1170,7 +1170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 525);
+            this.ClientSize = new System.Drawing.Size(876, 420);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

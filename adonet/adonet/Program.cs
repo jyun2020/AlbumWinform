@@ -19,8 +19,8 @@ namespace adonet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmOverview());
-            //Application.Run(new FrmSqlConnection());
-            Application.Run(new FrmConnected());
+            Application.Run(new FrmSqlConnection());
+            //Application.Run(new FrmConnected());
         }
     }
 }

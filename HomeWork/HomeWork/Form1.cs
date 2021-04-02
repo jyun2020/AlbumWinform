@@ -44,7 +44,7 @@ namespace HomeWork
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frm5 f = new frm5();
+            frm5 f = new frm5(" ");
             f.Show();
         }
 

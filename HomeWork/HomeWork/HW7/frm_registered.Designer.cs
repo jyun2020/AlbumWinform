@@ -148,6 +148,7 @@ namespace HomeWork.HW7
             this.tb_password.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_password.Location = new System.Drawing.Point(128, 109);
             this.tb_password.Name = "tb_password";
+            this.tb_password.PasswordChar = '●';
             this.tb_password.Size = new System.Drawing.Size(149, 29);
             this.tb_password.TabIndex = 8;
             // 
@@ -156,6 +157,7 @@ namespace HomeWork.HW7
             this.tb_password2.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_password2.Location = new System.Drawing.Point(185, 176);
             this.tb_password2.Name = "tb_password2";
+            this.tb_password2.PasswordChar = '●';
             this.tb_password2.Size = new System.Drawing.Size(149, 29);
             this.tb_password2.TabIndex = 9;
             // 

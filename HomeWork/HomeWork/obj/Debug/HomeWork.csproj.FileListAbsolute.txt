@@ -44,8 +44,6 @@ F:\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.GenerateResource.cache
 F:\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.CoreCompileInputs.cache
 F:\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.exe
 F:\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
-C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\HW5\MyCity.mdf
-C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\HW5\MyCity_log.ldf
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\HomeWork.exe.config
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\HomeWork.exe
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\HomeWork.pdb
@@ -101,3 +99,6 @@ F:\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.HW7.frm_registered.resources
 F:\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.exam.frmExam.resources
 F:\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum.mdf
 F:\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum_log.ldf
+C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum.mdf
+C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum_log.ldf
+C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.exam.frmExam.resources

@@ -47,8 +47,9 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(69, 6);
+            this.comboBox1.Location = new System.Drawing.Point(92, 8);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 23);
@@ -58,10 +59,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Country:";
             // 
@@ -70,6 +72,7 @@
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.BackColor = System.Drawing.Color.MistyRose;
             this.listView1.ContextMenuStrip = this.contextMenuStrip2;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 35);
@@ -160,6 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(1076, 502);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.comboBox1);
