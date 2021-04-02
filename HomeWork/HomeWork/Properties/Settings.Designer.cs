@@ -46,11 +46,21 @@ namespace HomeWork.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|HW5\\MyCity.mdf" +
-            ";Integrated Security=True;Connect Timeout=30")]
-        public string MyCityConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MyAlbum.mdf;I" +
+            "ntegrated Security=True;Connect Timeout=30")]
+        public string LocalMyAlbumConnectionString {
             get {
-                return ((string)(this["MyCityConnectionString"]));
+                return ((string)(this["LocalMyAlbumConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=MyAlbum;Integrated Security=True")]
+        public string MyAlbumConnectionString {
+            get {
+                return ((string)(this["MyAlbumConnectionString"]));
             }
         }
     }

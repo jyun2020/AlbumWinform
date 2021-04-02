@@ -19,8 +19,22 @@ namespace HomeWork.HW7
         public frm7()
         {
             InitializeComponent();
+            cb_DBchange.SelectedIndex = 0;
         }
-        string connstring = Settings.Default.NorthwindConnectionString;
+        string ConnString = "";
+
+        private void cb_DBchange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_DBchange.SelectedIndex == 0)
+            {
+                ConnString = Settings.Default.LocalMyAlbumConnectionString;
+            }
+            else
+            {
+                ConnString = Settings.Default.MyAlbumConnectionString;
+            }
+        }
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string account = textBox1.Text;
@@ -31,7 +45,7 @@ namespace HomeWork.HW7
             } //跑100次雜湊
             try
             {
-                using (SqlConnection conn = new SqlConnection(connstring))
+                using (SqlConnection conn = new SqlConnection(ConnString))
                 {
                     SqlCommand command = new SqlCommand("SELECT * FROM member WHERE Account = @Account AND Password = @Password",conn);
                     command.Parameters.Add("@Account", SqlDbType.NVarChar).Value = account;
@@ -67,7 +81,7 @@ namespace HomeWork.HW7
 
         private void btn_Registered_Click(object sender, EventArgs e)
         {
-            frm_registered frmRegistered = new frm_registered();
+            frm_registered frmRegistered = new frm_registered(ConnString);
             frmRegistered.Show();
             this.Close();
         }

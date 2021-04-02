@@ -55,6 +55,7 @@ namespace HomeWork.HW7
             this.lb_birthday = new System.Windows.Forms.Label();
             this.lb_email = new System.Windows.Forms.Label();
             this.lb_phone = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -326,6 +327,18 @@ namespace HomeWork.HW7
             this.lb_phone.Text = "1";
             this.lb_phone.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(185, 485);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 43);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "返回登入頁面";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm_registered
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -333,6 +346,7 @@ namespace HomeWork.HW7
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(579, 569);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_phone);
             this.Controls.Add(this.lb_email);
             this.Controls.Add(this.lb_birthday);
@@ -363,7 +377,6 @@ namespace HomeWork.HW7
             this.MinimumSize = new System.Drawing.Size(597, 616);
             this.Name = "frm_registered";
             this.Text = "註冊會員";
-            this.Load += new System.EventHandler(this.frm_registered_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +409,6 @@ namespace HomeWork.HW7
         private System.Windows.Forms.Label lb_birthday;
         private System.Windows.Forms.Label lb_email;
         private System.Windows.Forms.Label lb_phone;
+        private System.Windows.Forms.Button button1;
     }
 }

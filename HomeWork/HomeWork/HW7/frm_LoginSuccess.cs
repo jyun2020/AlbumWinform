@@ -1,4 +1,5 @@
-﻿using HomeWork.Properties;
+﻿using HomeWork.HW5;
+using HomeWork.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,18 +17,14 @@ namespace HomeWork.HW7
         public frm_LoginSuccess(string memberName)
         {
             InitializeComponent();
-            label2.Text = memberName;
+            this.Text= "親愛的"+memberName+"歡迎回來";
         }
-        public string memberName
+
+        private void btn_MyAlbum_Click(object sender, EventArgs e)
         {
-            set
-            {
-                label2.Text = value;
-            }
-            get
-            {
-                return label2.Text;
-            }
+            frm5 f = new frm5();
+            f.Show();
+            this.Close(); //跳轉頁面
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using HomeWork.exam;
 using HomeWork.HW1;
 using HomeWork.HW2;
 using HomeWork.HW3;
@@ -56,6 +57,12 @@ namespace HomeWork
         private void button7_Click(object sender, EventArgs e)
         {
             frm7 f = new frm7();
+            f.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmExam f = new frmExam();
             f.Show();
         }
     }

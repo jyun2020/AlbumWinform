@@ -67,6 +67,7 @@ namespace HomeWork.HW6
                 MessageBox.Show(e.Message);
             }
         }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.listView1.Items.Clear();
@@ -111,6 +112,7 @@ namespace HomeWork.HW6
         {
             this.listView1.View = View.Details;
         }
+
         private void customerIDAscToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
@@ -178,7 +180,7 @@ namespace HomeWork.HW6
         private void countryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            ListViewGroup[] viewGroups = CreatLisrViewGroup();
+            ListViewGroup[] viewGroups = CreatListViewGroup(); //按下GroupBy時開始建立Group,並接收一個ListViewGroup陣列
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -186,17 +188,20 @@ namespace HomeWork.HW6
                     SqlCommand command = new SqlCommand($"SELECT * FROM Customers", conn);
                     conn.Open();
                     SqlDataReader dataReader = command.ExecuteReader();
+
                     while (dataReader.Read())
                     {
+                        //每讀一筆資料,就新建一個ListViewItem,並放到listView中
                         ListViewItem lvi = this.listView1.Items.Add(dataReader["CustomerID"].ToString());
-                        for (int i = 0; i < viewGroups.Length; i++)
+                        for (int i = 0; i < viewGroups.Length; i++) //循環把CustomerID做分類
                         {
-                            if(viewGroups[i].Name == dataReader["Country"].ToString())
+                            if(viewGroups[i].Name == dataReader["Country"].ToString())//找到這一筆屬於哪個Group時
                             {
-                                lvi.Group = viewGroups[i];
+                                lvi.Group = viewGroups[i];//設定每個ListViewItem屬於哪個ListViewGroup
                             }
                         }
-                        for (int i = 1; i <= dataReader.FieldCount - 1; i++)
+
+                        for (int i = 1; i <= dataReader.FieldCount - 1; i++) //循環把ListViewItem後面的詳細資料加進去
                         {
                             if (dataReader.IsDBNull(i))
                             {
@@ -215,7 +220,9 @@ namespace HomeWork.HW6
                 MessageBox.Show("123" + ex.Message);
             }
         }
-        private ListViewGroup[] CreatLisrViewGroup()
+
+        //查出所有country並建立group item,回傳Group出去
+        private ListViewGroup[] CreatListViewGroup()
         {
             try
             {
@@ -226,14 +233,14 @@ namespace HomeWork.HW6
                     SqlDataReader dataReader = command.ExecuteReader();
                     DataTable dataTable = new DataTable();
                     dataTable.Load(dataReader);
-                    ListViewGroup[]  viewGroups = new ListViewGroup[dataTable.Rows.Count];
+                    ListViewGroup[]  viewGroups = new ListViewGroup[dataTable.Rows.Count];//建立一個陣列傳出去用
                     for (int i = 0; i < dataTable.Rows.Count; i++)
                     {
                         ListViewGroup lvg = new ListViewGroup();
-                        lvg.Header = dataTable.Rows[i][0].ToString();
+                        lvg.Header = dataTable.Rows[i][0].ToString();//設定group屬性
                         lvg.Name = dataTable.Rows[i][0].ToString();
-                        listView1.Groups.Add(lvg);
-                        viewGroups[i] = lvg;
+                        listView1.Groups.Add(lvg); //加到listView
+                        viewGroups[i] = lvg;//加進陣列
                     }
                     return viewGroups;
                 }
@@ -243,6 +250,6 @@ namespace HomeWork.HW6
                 MessageBox.Show(ex.Message);
                 return null;
             }
-        }
+        } 
     }
 }

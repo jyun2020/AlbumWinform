@@ -15,19 +15,21 @@ namespace HomeWork.HW7
 {
     public partial class frm_registered : Form
     {
-        public frm_registered()
+        string ConnString = ""; //連線字串
+        public frm_registered(string ConnString)
         {
+            
             InitializeComponent();
+            this.ConnString = ConnString;
             birthdayPicker.MaxDate = DateTime.Today;
             birthdayPicker.MinDate = new DateTime(1921, 1, 1);
             birthdayPicker.CustomFormat = "yyyy-MM-dd";
             birthdayPicker.Format = DateTimePickerFormat.Custom;
         }
-        string connString = Settings.Default.NorthwindConnectionString; //連線字串
 
         private void btn_registered_Click(object sender, EventArgs e)
         {
-            Judgment jdg = new Judgment(); //建立判斷物件
+            Judgment jdg = new Judgment(ConnString); //建立判斷物件
             UserData data = new UserData(); //建立使用者
             data.Account = tb_account.Text; 
             data.Password1 = tb_password.Text;
@@ -62,8 +64,8 @@ namespace HomeWork.HW7
                     if (AddUserData(data))//如果正確就丟進AddUserData方法裡加進資料庫
                     {
                         MessageBox.Show("註冊成功!為您跳轉登入頁面!");
-                        System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
-                        t.Start();
+                        frm7 f = new frm7();
+                        f.Show();
                         this.Close(); //跳轉頁面
                     }
                     else
@@ -86,7 +88,7 @@ namespace HomeWork.HW7
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = new SqlConnection(ConnString))
                 {
                     string strSQL = @"INSERT INTO member(Account,Password,email,IDnumber,date,phone)
                           VALUES (@Account,@Password,@email,@IDnumber,@date,@phone)";
@@ -116,14 +118,11 @@ namespace HomeWork.HW7
                 return false;
             }
         }
-        public static void ThreadProc()
+        private void button1_Click(object sender, EventArgs e)
         {
-            Application.Run(new frm7());//設定要跳轉的視窗       
-        }
-
-        private void frm_registered_Load(object sender, EventArgs e)
-        {
-
+            frm7 f = new frm7();
+            f.Show();
+            this.Close(); //跳轉頁面
         }
     }
 }

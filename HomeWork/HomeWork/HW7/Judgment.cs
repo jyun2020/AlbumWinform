@@ -12,6 +12,11 @@ namespace HomeWork.HW7
 {
     public class Judgment : UserData
     {
+        private string ConnString;
+        public Judgment(string ConnString)
+        {
+            this.ConnString = ConnString;
+        }
         public bool AllJdg(UserData data, out string AccountMessage, out string PasswordMessage, out string EmailMessage,
             out string PhonenumberMessage, out string IDnumberMessage, out string BirthdayMessage)//全部判斷
         {
@@ -30,14 +35,12 @@ namespace HomeWork.HW7
                 return false;
             }
         }
-        string connString = Settings.Default.NorthwindConnectionString;
-
         public string AccountJdg(string account)//判斷帳號
         {
             this.Account = account;
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = new SqlConnection(ConnString))
                 {
                     string strSQL = "SELECT * FROM member WHERE account = @account";
                     SqlCommand cmd = new SqlCommand(strSQL, conn);
@@ -133,7 +136,7 @@ namespace HomeWork.HW7
             this.Email = email;
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = new SqlConnection(ConnString))
                 {
                     string strSQL = "SELECT * FROM member WHERE email = @email";
                     SqlCommand cmd = new SqlCommand(strSQL, conn);
@@ -189,7 +192,7 @@ namespace HomeWork.HW7
         }
         public string IDnumberJdg(string IDnumber)//判斷身分證字號
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(ConnString))
             {
                 this.IDnumber = IDnumber;
                 string strSQL = "SELECT * FROM member WHERE IDnumber = @IDnumber";

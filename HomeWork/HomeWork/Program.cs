@@ -1,4 +1,5 @@
-﻿using HomeWork.HW7;
+﻿using HomeWork.exam;
+using HomeWork.HW7;
 using System;
 using System.Collections.Generic;
 using System.Linq;

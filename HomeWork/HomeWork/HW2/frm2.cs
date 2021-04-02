@@ -43,11 +43,13 @@ namespace HomeWork.HW2
                         comboBox2.Items.Add(dr1[0].ToString());
                     }
                 }
+                comboBox2.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            comboBox1.SelectedIndex = 0;
 
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,6 +69,7 @@ namespace HomeWork.HW2
                         comboBox3.Items.Add(dr["COLUMN_NAME"]);
                     }
                 }
+                comboBox3.SelectedIndex = 0;
             }
             catch (Exception ex)
             {

@@ -30,33 +30,20 @@ namespace HomeWork.HW7
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_LoginSuccess));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_MyAlbum = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // btn_MyAlbum
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.ForeColor = System.Drawing.Color.Chocolate;
-            this.label1.Location = new System.Drawing.Point(156, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 61);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "登入成功!歡迎您";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.ForeColor = System.Drawing.Color.Chocolate;
-            this.label2.Location = new System.Drawing.Point(58, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 61);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "1";
+            this.btn_MyAlbum.BackColor = System.Drawing.Color.Bisque;
+            this.btn_MyAlbum.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_MyAlbum.Location = new System.Drawing.Point(178, 78);
+            this.btn_MyAlbum.Name = "btn_MyAlbum";
+            this.btn_MyAlbum.Size = new System.Drawing.Size(202, 58);
+            this.btn_MyAlbum.TabIndex = 2;
+            this.btn_MyAlbum.Text = "進入相簿管理器";
+            this.btn_MyAlbum.UseVisualStyleBackColor = false;
+            this.btn_MyAlbum.Click += new System.EventHandler(this.btn_MyAlbum_Click);
             // 
             // frm_LoginSuccess
             // 
@@ -65,18 +52,14 @@ namespace HomeWork.HW7
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(569, 218);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_MyAlbum);
             this.Name = "frm_LoginSuccess";
             this.Text = "登入成功";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_MyAlbum;
     }
 }
