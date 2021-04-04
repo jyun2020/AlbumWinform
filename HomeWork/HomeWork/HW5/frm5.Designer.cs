@@ -55,6 +55,7 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.lb_SelectCount = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -68,7 +69,7 @@
             this.cb_AlbumSelect.Location = new System.Drawing.Point(12, 158);
             this.cb_AlbumSelect.MaxDropDownItems = 50;
             this.cb_AlbumSelect.Name = "cb_AlbumSelect";
-            this.cb_AlbumSelect.Size = new System.Drawing.Size(211, 33);
+            this.cb_AlbumSelect.Size = new System.Drawing.Size(211, 28);
             this.cb_AlbumSelect.TabIndex = 0;
             this.cb_AlbumSelect.SelectedIndexChanged += new System.EventHandler(this.cb_AlbumSelect_SelectedIndexChanged);
             // 
@@ -115,7 +116,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Location = new System.Drawing.Point(228, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 18);
+            this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 9;
             this.label3.Text = "拖曳加入照片";
             // 
@@ -126,7 +127,7 @@
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(8, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 25);
+            this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "選擇相簿:";
             // 
@@ -136,12 +137,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(112, 26);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -175,7 +176,7 @@
             this.tb_addAlbum.Location = new System.Drawing.Point(10, 247);
             this.tb_addAlbum.MaxLength = 100;
             this.tb_addAlbum.Name = "tb_addAlbum";
-            this.tb_addAlbum.Size = new System.Drawing.Size(211, 31);
+            this.tb_addAlbum.Size = new System.Drawing.Size(211, 27);
             this.tb_addAlbum.TabIndex = 9;
             // 
             // btn_addAlbum
@@ -192,7 +193,6 @@
             // 
             // btn_deleteAlbum
             // 
-            this.btn_deleteAlbum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_deleteAlbum.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_deleteAlbum.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_deleteAlbum.Location = new System.Drawing.Point(10, 337);
@@ -211,7 +211,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(326, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 18);
+            this.label2.Size = new System.Drawing.Size(84, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "右鍵可刪除圖片";
             // 
@@ -224,7 +224,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Location = new System.Drawing.Point(73, 698);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 101);
+            this.label4.Size = new System.Drawing.Size(82, 81);
             this.label4.TabIndex = 12;
             this.label4.Text = "+";
             // 
@@ -235,7 +235,7 @@
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.Location = new System.Drawing.Point(6, 47);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 25);
+            this.label5.Size = new System.Drawing.Size(93, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "選擇資料庫:";
             // 
@@ -249,7 +249,7 @@
             "SQLSERVER"});
             this.cb_DBchange.Location = new System.Drawing.Point(11, 78);
             this.cb_DBchange.Name = "cb_DBchange";
-            this.cb_DBchange.Size = new System.Drawing.Size(211, 33);
+            this.cb_DBchange.Size = new System.Drawing.Size(211, 28);
             this.cb_DBchange.TabIndex = 14;
             this.cb_DBchange.SelectedIndexChanged += new System.EventHandler(this.cb_DBchange_SelectedIndexChanged);
             // 
@@ -259,9 +259,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 875);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 878);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1440, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1440, 22);
             this.statusStrip1.TabIndex = 15;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -269,7 +269,7 @@
             // 
             this.toolStripStatusLabel1.LinkColor = System.Drawing.Color.PaleTurquoise;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(158, 19);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(128, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // cb_SelectAll
@@ -279,7 +279,7 @@
             this.cb_SelectAll.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cb_SelectAll.Location = new System.Drawing.Point(978, 19);
             this.cb_SelectAll.Name = "cb_SelectAll";
-            this.cb_SelectAll.Size = new System.Drawing.Size(114, 29);
+            this.cb_SelectAll.Size = new System.Drawing.Size(92, 24);
             this.cb_SelectAll.TabIndex = 17;
             this.cb_SelectAll.Text = "選擇全部";
             this.cb_SelectAll.UseVisualStyleBackColor = false;
@@ -331,9 +331,21 @@
             this.lb_SelectCount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lb_SelectCount.Location = new System.Drawing.Point(1098, 20);
             this.lb_SelectCount.Name = "lb_SelectCount";
-            this.lb_SelectCount.Size = new System.Drawing.Size(17, 25);
+            this.lb_SelectCount.Size = new System.Drawing.Size(13, 20);
             this.lb_SelectCount.TabIndex = 22;
             this.lb_SelectCount.Text = " ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(9, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 15);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "相簿名稱不可使用空白字元";
             // 
             // frm5
             // 
@@ -343,6 +355,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 900);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lb_SelectCount);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Delete);
@@ -364,6 +377,7 @@
             this.Controls.Add(this.btn_browse);
             this.Controls.Add(this.cb_AlbumSelect);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MinimumSize = new System.Drawing.Size(1241, 677);
             this.Name = "frm5";
             this.Text = " ";
             this.contextMenuStrip1.ResumeLayout(false);
@@ -402,5 +416,6 @@
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Label lb_SelectCount;
+        private System.Windows.Forms.Label label6;
     }
 }

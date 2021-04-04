@@ -55,7 +55,7 @@ namespace HomeWork.HW7
                         else
                         {
                             var hasNumber = new Regex(@"[0-9]+");
-                            var hasMiniMaxChars = new Regex(@".{5,15}");
+                            var hasMiniMaxChars = new Regex(@".{8,15}");
                             var hasLowerChar = new Regex(@"[a-z]+");
                             //var hasUpperChar = new Regex(@"[A-Z]+");
                             //var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
@@ -107,7 +107,7 @@ namespace HomeWork.HW7
             this.Password1 = password1;
             this.Password2 = password2;
             var hasNumber = new Regex(@"[0-9]+");
-            var hasMiniMaxChars = new Regex(@".{5,15}");
+            var hasMiniMaxChars = new Regex(@".{8,15}");
             var hasLowerChar = new Regex(@"[a-z]+");
 
             if (string.IsNullOrWhiteSpace(password1) || password1 != password2)
