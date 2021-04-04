@@ -146,7 +146,7 @@ namespace HomeWork.HW7
             // 
             this.tb_account.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_account.Location = new System.Drawing.Point(94, 34);
-            this.tb_account.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_account.Margin = new System.Windows.Forms.Padding(2);
             this.tb_account.MaxLength = 15;
             this.tb_account.Name = "tb_account";
             this.tb_account.Size = new System.Drawing.Size(113, 25);
@@ -156,7 +156,7 @@ namespace HomeWork.HW7
             // 
             this.tb_password.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_password.Location = new System.Drawing.Point(96, 87);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_password.Margin = new System.Windows.Forms.Padding(2);
             this.tb_password.MaxLength = 15;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '●';
@@ -167,7 +167,7 @@ namespace HomeWork.HW7
             // 
             this.tb_password2.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_password2.Location = new System.Drawing.Point(139, 141);
-            this.tb_password2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_password2.Margin = new System.Windows.Forms.Padding(2);
             this.tb_password2.MaxLength = 15;
             this.tb_password2.Name = "tb_password2";
             this.tb_password2.PasswordChar = '●';
@@ -178,7 +178,7 @@ namespace HomeWork.HW7
             // 
             this.tb_id.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_id.Location = new System.Drawing.Point(158, 179);
-            this.tb_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_id.Margin = new System.Windows.Forms.Padding(2);
             this.tb_id.MaxLength = 10;
             this.tb_id.Name = "tb_id";
             this.tb_id.Size = new System.Drawing.Size(113, 25);
@@ -188,7 +188,7 @@ namespace HomeWork.HW7
             // 
             this.tb_email.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_email.Location = new System.Drawing.Point(114, 259);
-            this.tb_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_email.Margin = new System.Windows.Forms.Padding(2);
             this.tb_email.MaxLength = 200;
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(154, 25);
@@ -198,7 +198,7 @@ namespace HomeWork.HW7
             // 
             this.tb_phone.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_phone.Location = new System.Drawing.Point(138, 302);
-            this.tb_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_phone.Margin = new System.Windows.Forms.Padding(2);
             this.tb_phone.MaxLength = 10;
             this.tb_phone.Name = "tb_phone";
             this.tb_phone.Size = new System.Drawing.Size(91, 25);
@@ -208,9 +208,9 @@ namespace HomeWork.HW7
             // 
             this.birthdayPicker.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.birthdayPicker.Location = new System.Drawing.Point(177, 220);
-            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.birthdayPicker.Margin = new System.Windows.Forms.Padding(2);
             this.birthdayPicker.Name = "birthdayPicker";
-            this.birthdayPicker.Size = new System.Drawing.Size(111, 25);
+            this.birthdayPicker.Size = new System.Drawing.Size(128, 25);
             this.birthdayPicker.TabIndex = 13;
             // 
             // btn_Registered
@@ -218,7 +218,7 @@ namespace HomeWork.HW7
             this.btn_Registered.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Registered.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Registered.Location = new System.Drawing.Point(35, 388);
-            this.btn_Registered.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Registered.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Registered.Name = "btn_Registered";
             this.btn_Registered.Size = new System.Drawing.Size(96, 34);
             this.btn_Registered.TabIndex = 14;
@@ -231,7 +231,7 @@ namespace HomeWork.HW7
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Location = new System.Drawing.Point(38, 364);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 15;
@@ -324,7 +324,7 @@ namespace HomeWork.HW7
             this.lb_birthday.BackColor = System.Drawing.Color.Transparent;
             this.lb_birthday.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lb_birthday.ForeColor = System.Drawing.Color.Red;
-            this.lb_birthday.Location = new System.Drawing.Point(292, 231);
+            this.lb_birthday.Location = new System.Drawing.Point(309, 231);
             this.lb_birthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_birthday.Name = "lb_birthday";
             this.lb_birthday.Size = new System.Drawing.Size(11, 12);
@@ -365,7 +365,7 @@ namespace HomeWork.HW7
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(139, 388);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 34);
             this.button1.TabIndex = 26;
@@ -406,7 +406,7 @@ namespace HomeWork.HW7
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(452, 501);
             this.MinimumSize = new System.Drawing.Size(452, 501);

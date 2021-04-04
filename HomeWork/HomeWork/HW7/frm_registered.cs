@@ -18,7 +18,6 @@ namespace HomeWork.HW7
         string ConnString = ""; //連線字串
         public frm_registered(string ConnString)
         {
-            
             InitializeComponent();
             this.ConnString = ConnString;
             birthdayPicker.MaxDate = DateTime.Today;

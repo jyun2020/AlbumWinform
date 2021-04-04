@@ -283,7 +283,7 @@ namespace HomeWork.HW5
         }
         private void btn_insert_Click(object sender, EventArgs e)
         {
-            if (cb_AlbumSelect.Text != "")
+            if (cb_AlbumSelect.Text != "" &&  pictureBox1.Image != null)
             {
                 PictureBox pic = new PictureBox();
                 pic.Image = pictureBox1.Image;
@@ -325,7 +325,7 @@ namespace HomeWork.HW5
             }
             else
             {
-                MessageBox.Show("此資料庫無相簿");
+                MessageBox.Show("請先選擇照片");
             }
             LoadImage();
         }
