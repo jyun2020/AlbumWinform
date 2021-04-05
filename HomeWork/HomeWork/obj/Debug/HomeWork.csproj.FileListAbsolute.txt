@@ -102,3 +102,4 @@ F:\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum_log.ldf
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum.mdf
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum_log.ldf
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.exam.frmExam.resources
+C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.HW7.frm_EmailApprove.resources

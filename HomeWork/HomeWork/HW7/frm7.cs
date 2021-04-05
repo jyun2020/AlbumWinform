@@ -54,9 +54,18 @@ namespace HomeWork.HW7
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        frm_LoginSuccess frmLoginSuccess = new frm_LoginSuccess(account);
-                        frmLoginSuccess.Show();
-                        this.Close(); //跳轉頁面
+                        if ((bool)reader["approve"] == true)
+                        {
+                            frm_LoginSuccess frmLoginSuccess = new frm_LoginSuccess(account);
+                            frmLoginSuccess.Show();
+                            this.Close(); //跳轉頁面
+                        }
+                        else
+                        {
+                            frm_EmailApprove frm_EmailApprove = new frm_EmailApprove(account,reader["email"].ToString(),reader["email_id"].ToString());
+                            frm_EmailApprove.Show();
+                            this.Close();
+                        }
                     }
                     else
                     {

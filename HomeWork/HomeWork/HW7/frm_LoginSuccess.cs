@@ -14,17 +14,17 @@ namespace HomeWork.HW7
 {
     public partial class frm_LoginSuccess : Form
     {
-        string memberName = "";
-        public frm_LoginSuccess(string memberName)
+        string account = "";
+        public frm_LoginSuccess(string account)
         {
             InitializeComponent();
-            this.Text= "親愛的"+memberName+"歡迎回來";
-            this.memberName = memberName;
+            this.Text= "親愛的" + account + "歡迎回來";
+            this.account = account;
         }
 
         private void btn_MyAlbum_Click(object sender, EventArgs e)
         {
-            frm5 f = new frm5(memberName);
+            frm5 f = new frm5(account);
             f.Show();
             this.Close(); //跳轉頁面
         }

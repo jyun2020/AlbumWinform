@@ -14,21 +14,25 @@ namespace HomeWork.exam
 {
     public partial class frmExam : Form
     {
-        public frmExam()
-        {
-            InitializeComponent();
-            AddListViewColumns();
-            AddTreeViewNode();
-        }
         string connstring = Settings.Default.NorthwindConnectionString;
         List<TreeNode> nodes = new List<TreeNode>();
         List<TreeNode> nodes2 = new List<TreeNode>();
         List<string> nodesName = new List<string>();
+
+        public frmExam()
+        {
+            InitializeComponent();
+            AddTreeViewNode();
+            LoadColumns();
+        }
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             TreeNode TN = e.Node;
             FillDataGridView(TN);
+            LoadListViewData(TN);
         }
+
         private void AddTreeViewNode()
         {
             try
@@ -88,7 +92,11 @@ namespace HomeWork.exam
                         SqlDataReader reader = command.ExecuteReader();
                         DataTable dataTable = new DataTable();
                         dataTable.Load(reader);
-                        dataGridView1.DataSource = dataTable;
+                        DataSet dataSet = new DataSet();
+                        dataSet.Tables.Add(dataTable);
+                        bindingSource1.DataSource = dataSet.Tables[0];
+                        bindingNavigator1.BindingSource = bindingSource1;
+                        dataGridView1.DataSource = bindingSource1;
                     }
                 }
                 catch (Exception ex)
@@ -120,7 +128,7 @@ namespace HomeWork.exam
                 }
             }
         }
-        private void AddListViewColumns()
+        private void LoadColumns()
         {
             try
             {
@@ -134,7 +142,39 @@ namespace HomeWork.exam
                     {
                         listView1.Columns.Add(dataTable.Rows[i][0].ToString());
                     }
-                    //listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);//自動調整欄位寬度
+                    listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);//自動調整欄位寬度
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void LoadListViewData(TreeNode TN)
+        {
+            this.listView1.Items.Clear();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connstring))
+                {
+                    SqlCommand command = new SqlCommand($"SELECT * FROM Customers WHERE Country = '{TN.Name}'", conn);
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        ListViewItem lvi = this.listView1.Items.Add(dataReader["CustomerID"].ToString());
+                        for (int i = 1; i <= dataReader.FieldCount - 1; i++)
+                        {
+                            if (dataReader.IsDBNull(i))
+                            {
+                                lvi.SubItems.Add("空值");
+                            }
+                            else
+                            {
+                                lvi.SubItems.Add(dataReader[i].ToString());
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
