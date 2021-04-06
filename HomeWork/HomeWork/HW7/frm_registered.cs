@@ -89,8 +89,8 @@ namespace HomeWork.HW7
             {
                 using (SqlConnection conn = new SqlConnection(ConnString))
                 {
-                    string strSQL = @"INSERT INTO member(Account,Password,email,IDnumber,date,phone)
-                          VALUES (@Account,@Password,@email,@IDnumber,@date,@phone)";
+                    string strSQL = @"INSERT INTO member(Account,Password,email,IDnumber,date,phone,approve)
+                          VALUES (@Account,@Password,@email,@IDnumber,@date,@phone,@approve)";
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(strSQL, conn);
 
@@ -106,6 +106,7 @@ namespace HomeWork.HW7
                     cmd.Parameters.Add("@IDnumber", SqlDbType.VarChar).Value = data.IDnumber;//前端傳進來的資料
                     cmd.Parameters.Add("@date",SqlDbType.Date).Value = data.Date;//前端傳進來的資料
                     cmd.Parameters.Add("@phone", SqlDbType.VarChar).Value = data.Phone;//前端傳進來的資料
+                    cmd.Parameters.Add("@approve", SqlDbType.Bit).Value = false;
                     cmd.ExecuteNonQuery();//最後一定要有這個,不然不會報錯也不會加進資料庫
                                           //ExecuteNonQuery方法主要用來更新數據，當然也可以用來執行目標操作
                     return true;

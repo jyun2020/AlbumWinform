@@ -62,7 +62,7 @@ namespace HomeWork.HW7
                         }
                         else
                         {
-                            frm_EmailApprove frm_EmailApprove = new frm_EmailApprove(account,reader["email"].ToString(),reader["email_id"].ToString());
+                            frm_EmailApprove frm_EmailApprove = new frm_EmailApprove(ConnString,account,reader["email"].ToString(),reader["email_id"].ToString());
                             frm_EmailApprove.Show();
                             this.Close();
                         }

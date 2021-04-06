@@ -161,6 +161,7 @@ namespace HomeWork.HW7
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.MinimumSize = new System.Drawing.Size(705, 544);
             this.Name = "frm7";
             this.Text = "登入系統實作";
             this.ResumeLayout(false);

@@ -17,7 +17,7 @@ namespace HomeWork.HW5
 {
     public partial class frm5 : Form
     {
-        string ConnString = Settings.Default.MyAlbumConnectionString;
+        string ConnString = Settings.Default.LocalMyAlbumConnectionString;
         string AlbumID = "";
         string Formfile = "";
         int SelectCount = 0;
@@ -32,7 +32,7 @@ namespace HomeWork.HW5
 
             this.Text = memberName + "的相簿";
             AddComboboxItem();
-            cb_DBchange.SelectedIndex = 1;
+            cb_DBchange.SelectedIndex = 0;
 
             ImagePanel.AllowDrop = true;
             ImagePanel.DragDrop += FlowLayoutPanel1_DragDrop;

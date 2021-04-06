@@ -20,17 +20,13 @@ namespace HomeWork.HW7
         string email = "";
         string email_id = "";
         string account = "";
-        public frm_EmailApprove(string account,string email , string email_id)
+        public frm_EmailApprove(string ConnString, string account,string email , string email_id)
         {
             InitializeComponent();
+            this.connstring = ConnString;
             this.email = email;
             this.email_id = email_id;
             this.account = account;
-        }
-
-        private void LoadUserEmail()
-        { 
-            
         }
 
         private void btn_SendEmail_Click(object sender, EventArgs e)

@@ -11,8 +11,6 @@ C:\Users\User\Desktop\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
 C:\Users\User\Desktop\HomeWork\HomeWork\obj\Debug\HomeWork.HW4.frm4.resources
 C:\Users\User\Desktop\HomeWork\HomeWork\obj\Debug\HomeWork.HW5.frm5.resources
 C:\Users\User\Desktop\HomeWork\HomeWork\obj\Debug\HomeWork.HW6.frm6.resources
-C:\Users\User\Desktop\HomeWork\HomeWork\bin\Debug\HW5\MyCity.mdf
-C:\Users\User\Desktop\HomeWork\HomeWork\bin\Debug\HW5\MyCity_log.ldf
 C:\Users\jyun2\Desktop\HomeWork\HomeWork\bin\Debug\HW5\MyCity.mdf
 C:\Users\jyun2\Desktop\HomeWork\HomeWork\bin\Debug\HW5\MyCity_log.ldf
 C:\Users\jyun2\Desktop\HomeWork\HomeWork\bin\Debug\HomeWork.exe.config
@@ -103,3 +101,7 @@ C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum.mdf
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\bin\Debug\MyAlbum_log.ldf
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.exam.frmExam.resources
 C:\Users\jyun2\Desktop\adonet\HomeWork\HomeWork\obj\Debug\HomeWork.HW7.frm_EmailApprove.resources
+C:\Users\User\Desktop\HomeWork\HomeWork\bin\Debug\MyAlbum.mdf
+C:\Users\User\Desktop\HomeWork\HomeWork\bin\Debug\MyAlbum_log.ldf
+C:\Users\User\Desktop\HomeWork\HomeWork\obj\Debug\HomeWork.exam.frmExam.resources
+C:\Users\User\Desktop\HomeWork\HomeWork\obj\Debug\HomeWork.HW7.frm_EmailApprove.resources
