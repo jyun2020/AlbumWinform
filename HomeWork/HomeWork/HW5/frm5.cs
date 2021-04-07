@@ -116,8 +116,6 @@ namespace HomeWork.HW5
                                 panel.Controls.Add(cb);
                                 panel.Controls.Add(pic);
 
-
-                                //ImagePanel.Controls.Add(pic);
                                 ImagePanel.Controls.Add(panel);
                                 pics.Add(pic);
                                 cbs.Add(cb);
@@ -205,7 +203,7 @@ namespace HomeWork.HW5
             //一層一層往外抓到picture
             //sender是ToolStripItem(delete)>找到他的ContextMenuStrip>再找到他的圖片
             ToolStripItem clickedItem = sender as ToolStripItem;
-            ContextMenuStrip owner = clickedItem.Owner as ContextMenuStrip;
+             ContextMenuStrip owner = clickedItem.Owner as ContextMenuStrip;
             Panel panel = owner.SourceControl as Panel;
 
             int imageid = imageIds[ImagePanel.Controls.IndexOf(panel)];

@@ -1,4 +1,5 @@
 ﻿using adonet._1.Overview;
+using Demo;
 using Starter;
 using System;
 using System.Collections.Generic;
@@ -19,8 +20,10 @@ namespace adonet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmOverview());
-            Application.Run(new FrmSqlConnection());
+            //Application.Run(new FrmSqlConnection());
             //Application.Run(new FrmConnected());
+            //Application.Run(new FrmTransactionIsolation());
+            Application.Run(new FrmDisConnected_離線DataSet());
         }
     }
 }

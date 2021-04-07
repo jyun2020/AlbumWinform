@@ -50,7 +50,7 @@ namespace Starter
         }
         private void Pic_Click(object sender, EventArgs e)
         {
-            PictureBox s =  sender as PictureBox;
+            PictureBox s = sender as PictureBox;
             if (s != null)
             {
                 Form f = new Form();
@@ -649,6 +649,64 @@ namespace Starter
                 LoadImage(ImageID);
             }
         }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connString = Settings.Default.NorthwindConnectionString;
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand();
+                    command.Connection = conn;
+
+                    command.CommandText = "INSERT INTO Region(RegionID,RegionDescription)VALUES(100,'100')";
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "INSERT INTO Region(RegionID,RegionDescription)VALUES(101,'101')";
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            SqlTransaction txn = null;
+            string connString = Settings.Default.NorthwindConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            try
+            {
+                conn.Open();
+                txn = conn.BeginTransaction();
+                SqlCommand command = new SqlCommand();
+                command.Transaction = txn;
+                command.Connection = conn;
+
+                command.CommandText = "INSERT INTO Region(RegionID,RegionDescription)VALUES(100,'100')";
+                command.ExecuteNonQuery();
+
+                command.CommandText = "INSERT INTO Region(RegionID,RegionDescription)VALUES(100,'100')";
+                command.ExecuteNonQuery();
+
+                command.CommandText = "INSERT INTO Region(RegionID,RegionDescription)VALUES(101,'101')";
+                command.ExecuteNonQuery();
+                txn.Commit();
+            }
+            catch (Exception ex)
+            {
+                txn.Rollback();
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
         }
         class MyImage : Object
         {
@@ -659,9 +717,11 @@ namespace Starter
                 this.ImageId = ImageId;
                 this.Description = Description;
             }
-        public override string ToString()
-        {
-            return $"{this.ImageId}----{this.Description}";
+            public override string ToString()
+            {
+                return $"{this.ImageId}----{this.Description}";
+            }
         }
     }
 }
+

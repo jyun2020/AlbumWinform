@@ -87,11 +87,41 @@
     <Compile Include="3.Connected\FrmConnected.designer.cs">
       <DependentUpon>FrmConnected.cs</DependentUpon>
     </Compile>
+    <Compile Include="3.Connected\FrmTransactionIsolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3.Connected\FrmTransactionIsolation.designer.cs">
+      <DependentUpon>FrmTransactionIsolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmAddProduct.Designer.cs">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="4.Disconnected\FrmDisConnected_離線DataSet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="4.Disconnected\FrmDisConnected_離線DataSet.designer.cs">
       <DependentUpon>FrmDisConnected_離線DataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmLookUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmLookUP.Designer.cs">
+      <DependentUpon>FrmLookUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmProductCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmProductCRUD.Designer.cs">
+      <DependentUpon>FrmProductCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Disconnected\FrmProductDetail.Designer.cs">
+      <DependentUpon>FrmProductDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="NorthwindDataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -112,8 +142,23 @@
     <EmbeddedResource Include="3.Connected\FrmConnected.resx">
       <DependentUpon>FrmConnected.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="3.Connected\FrmTransactionIsolation.resx">
+      <DependentUpon>FrmTransactionIsolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Disconnected\FrmAddProduct.resx">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="4.Disconnected\FrmDisConnected_離線DataSet.resx">
       <DependentUpon>FrmDisConnected_離線DataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Disconnected\FrmLookUP.resx">
+      <DependentUpon>FrmLookUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Disconnected\FrmProductCRUD.resx">
+      <DependentUpon>FrmProductCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Disconnected\FrmProductDetail.resx">
+      <DependentUpon>FrmProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
